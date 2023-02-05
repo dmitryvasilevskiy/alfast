@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ItemStoreRequest extends FormRequest
@@ -13,7 +14,11 @@ class ItemStoreRequest extends FormRequest
     public function authorize()
     {
         $user = User::where('email', $this->getUser())->first();
-        return $user && Hash::check($this->getPassword(), $user->password);
+        if ($user && Hash::check($this->getPassword(), $user->password)) {
+            Auth::login($user);
+            return true;
+        }
+        return false;
     }
 
     public function rules()

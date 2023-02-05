@@ -12,17 +12,21 @@
     <tr>
         <th>№</th>
         <th>Название</th>
+        <th>Пользователь</th>
         <th>Создано</th>
         <th>Обновлено</th>
     </tr>
-    <tr>
-        @foreach($items as $item)
+
+    @foreach($items as $item)
+        <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
+            <td>{{$item->user->name}}</td>
             <td>{{$item->created_at}}</td>
             <td>{{$item->updated_at}}</td>
-        @endforeach
-    </tr>
+        </tr>
+    @endforeach
+
 </table>
 </body>
 <script
