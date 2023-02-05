@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "6fea7ad25395bd97273e68a694af98c6",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -699,6 +699,43 @@
                 }
             ],
             "time": "2022-04-17T13:12:02+00:00"
+        },
+        {
+            "name": "midnite81/xml2array",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/midnite81/xml2array.git",
+                "reference": "d55e3857badc50d8a995fdcb06eb2eab43d65539"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/midnite81/xml2array/zipball/d55e3857badc50d8a995fdcb06eb2eab43d65539",
+                "reference": "d55e3857badc50d8a995fdcb06eb2eab43d65539",
+                "shasum": ""
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Midnite81\\Xml2Array\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Simon Rogers",
+                    "email": "webdev@centralblue.co.uk"
+                }
+            ],
+            "description": "A package to convert XML to an Array with the inbuilt ability to convert to Json, Laravel Collection and Serialize",
+            "support": {
+                "issues": "https://github.com/midnite81/xml2array/issues",
+                "source": "https://github.com/midnite81/xml2array/tree/master"
+            },
+            "time": "2018-07-09T18:27:57+00:00"
         },
         {
             "name": "monolog/monolog",
