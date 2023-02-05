@@ -13,7 +13,7 @@ class ItemController extends Controller
     public function store(ItemStoreRequest $request)
     {
         try {
-            return Item::query()->create(['name' => $request->all()['name'], 'user_id', Auth::id()]);
+            return Item::query()->create(['name' => $request->all()['name'], 'user_id' => Auth::id()]);
         } catch (\Exception $e) {
             return response(['message' => $e->getMessage()], 500);
         }

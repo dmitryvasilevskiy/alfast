@@ -21,7 +21,7 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
-            <td>{{$item->user->name}}</td>
+            <td>{{$item->user ? $item->user->name : ''}}</td>
             <td>{{$item->created_at}}</td>
             <td>{{$item->updated_at}}</td>
         </tr>
